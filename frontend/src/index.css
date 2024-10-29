@@ -1,0 +1,165 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #6c757d; /* Gray color */
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #6c757d; /* Gray color */
+  padding-bottom: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="submit"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background: #6c757d; /* Gray color */
+  color: white;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background: #5a6268; /* Darker gray on hover */
+}
+
+#projectsDiv {
+  margin-top: 20px;
+}
+
+#projectsDiv ul {
+  list-style: none;
+}
+
+#projectsDiv li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative; /* For the delete button */
+}
+
+#projectsDiv li button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#projectsDiv li button:hover {
+  background: #c82333;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #6c757d; /* Gray color */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.sequence-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.participant {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.arrow {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.messages {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+
+@media (max-width: 600px) {
+  header, footer {
+      padding: 20px;
+  }
+
+  nav ul li {
+      display: block;
+      margin: 5px 0;
+  }
+}
