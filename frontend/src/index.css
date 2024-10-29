@@ -1,4 +1,3 @@
-/* Basic reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,7 @@ body {
 }
 
 header {
-  background: #6c757d; /* Gray color */
+  background: #6c757d; 
   color: #fff;
   padding: 10px 20px;
   text-align: center;
@@ -53,7 +52,7 @@ section {
 
 section h2 {
   margin-bottom: 15px;
-  border-bottom: 2px solid #6c757d; /* Gray color */
+  border-bottom: 2px solid #6c757d; 
   padding-bottom: 5px;
 }
 
@@ -72,13 +71,13 @@ form input[type="submit"] {
 }
 
 form input[type="submit"] {
-  background: #6c757d; /* Gray color */
+  background: #6c757d; 
   color: white;
   cursor: pointer;
 }
 
 form input[type="submit"]:hover {
-  background: #5a6268; /* Darker gray on hover */
+  background: #5a6268; 
 }
 
 #projectsDiv {
@@ -94,7 +93,7 @@ form input[type="submit"]:hover {
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 10px;
-  position: relative; /* For the delete button */
+  position: relative; 
 }
 
 #projectsDiv li button {
@@ -117,7 +116,7 @@ form input[type="submit"]:hover {
 footer {
   text-align: center;
   padding: 10px;
-  background: #6c757d; /* Gray color */
+  background: #6c757d; 
   position: relative;
   bottom: 0;
   width: 100%;

@@ -1,4 +1,3 @@
-// src/SequenceDiagram.tsx
 import React from 'react';
 
 const SequenceDiagram: React.FC = () => {

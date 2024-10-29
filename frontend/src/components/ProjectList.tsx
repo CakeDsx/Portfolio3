@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { handleProjects } from '../script'; // Import handleProjects
+import { handleProjects } from '../script'; 
 
 const ProjectList: React.FC = () => {
     useEffect(() => {

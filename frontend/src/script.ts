@@ -39,9 +39,9 @@ export async function handleProjects(): Promise<void> {
         const a = document.createElement("a");
         const li = document.createElement("li");
         const para = document.createElement("p");
+        const deleteButton = document.createElement("button");
 
         const linkText = document.createTextNode(key);
-
         a.appendChild(linkText);
         a.title = key;
         a.href = `/${key}`;
@@ -49,7 +49,32 @@ export async function handleProjects(): Promise<void> {
 
         para.textContent = projects[key].description;
 
+        // Set up the delete button
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = () => deleteProject(key);
+
         element.appendChild(li);
         element.appendChild(para);
+        element.appendChild(deleteButton); // Add the delete button to the element
     }
 }
+
+async function deleteProject(projectId: string): Promise<void> {
+    const deleteURL = `http://localhost:3000/deletejson/${projectId}`;
+    try {
+        const response = await fetch(deleteURL, {
+            method: "DELETE",
+        });
+        if (!response.ok) {
+            throw new Error("Failed to delete project");
+        }
+        console.log("Project deleted successfully");
+        // Optionally, refresh the project list after deletion
+        await handleProjects();
+    } catch (error) {
+        console.error("Unable to delete project:", error);
+    }
+}
+
+// Call handleProjects to load the projects when the script is executed
+handleProjects();
