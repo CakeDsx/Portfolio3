@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { handleProjects } from '../script'; 
+import { handleProjects } from '../script';
+import './ProjectList.css'; 
 
 const ProjectList: React.FC = () => {
     useEffect(() => {
@@ -7,7 +8,7 @@ const ProjectList: React.FC = () => {
     }, []);
 
     return (
-        <section>
+        <section className="project-list">
             <h2 id="projects">My Projects</h2>
             <div id="projectsDiv"></div>
         </section>
