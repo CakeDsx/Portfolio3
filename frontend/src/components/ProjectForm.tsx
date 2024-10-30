@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { z } from 'zod';
 
-// Define your Zod schema for project validation
+// Zod schema for project validation
 const projectSchema = z.object({
     title: z.string().min(1, 'Project Name is required'),
     description: z.string().min(1, 'Project Description is required'),
@@ -76,7 +76,7 @@ const ProjectForm: React.FC = () => {
             }
 
             console.log("Replacing Window");
-            window.location.replace("/");
+            window.location.replace("/projects");
         } catch (error) {
             console.error("Error posting data:", error);
         }

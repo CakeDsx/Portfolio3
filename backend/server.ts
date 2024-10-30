@@ -132,7 +132,7 @@ app.get("/", (c) => {
 // Start the server
 const port = 3000;
 
-console.log("Server is running on port 3000");
+console.log("Server is runninjjg on port 3000");
 
 serve({
   fetch: app.fetch,

@@ -3,6 +3,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { serveStatic } from "@hono/node-server/serve-static";
 import { readFile, writeFile } from "node:fs/promises";
+import { type DB, db } from "./db/db.js"
 
 // Initialize the Hono app
 const app = new Hono();
@@ -86,7 +87,7 @@ app.delete("/deletejson/:id", async (c) => {
 
 // Start the server
 const port = 3000;
-
+const database = db;
 console.log("Server is running on port 3000");
 
 serve({
